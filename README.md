@@ -1,42 +1,51 @@
-# noted-app
+# 📝 Notes Application
 
-This template should help get you started developing with Vue 3 in Vite.
+## Project Overview
+The **Notes Application** is a full-stack web app that allows users to **create, read, update, and delete (CRUD) notes**.  
+It demonstrates **frontend development with Vue + TypeScript + Tailwind** and **backend development with ASP.NET Core Web API using Dapper and SQL Server**.  
 
-## Recommended IDE Setup
+Users can:
+- Create notes with title and optional content
+- View a list of notes with creation date
+- Edit or delete their own notes
+- Search and filter notes (basic functionality)
+- Responsive design for desktop and mobile
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🚀 Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+| Layer | Technology |
+|-------|------------|
+| Frontend | Vue 3, TypeScript, Tailwind CSS, Axios |
+| Backend | ASP.NET Core Web API, Dapper, C# |
+| Database | SQL Server |
+| Version Control | Git & GitHub |
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 📂 Project Structure
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+NotesApp/
+├── frontend/                  # Vue 3 + TypeScript + Tailwind
+│   ├── src/
+│   │   ├── components/        # Reusable components (NoteCard, NoteModal, etc.)
+│   │   ├── views/             # Pages (NoteList, Dashboard)
+│   │   ├── stores/            # Pinia stores (optional)
+│   │   ├── services/          # Axios API service
+│   │   ├── types/             # TypeScript interfaces
+│   │   └── App.vue
+│   ├── tailwind.config.js
+│   └── vite.config.ts
+│
+├── backend/                   # ASP.NET Core Web API
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Repositories/          # Dapper repositories
+│   ├── Services/
+│   ├── Data/                  # SQL scripts or migrations
+│   └── Program.cs
+│
+├── database/                  # SQL Server scripts (tables, seed data)
+└── README.md
